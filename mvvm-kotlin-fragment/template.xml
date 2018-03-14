@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    name="mvvm kotlin fragment"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a new MVVM Fragment">
+
+    <category value="MVVM" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="packageName"
+        name="Class Package name"
+        type="string"
+        constraints="package"
+        default="com.niohouse.pay.feature"
+        help="class package name" />   
+
+    <parameter
+        id="appPackageName"
+        name="App Package name"
+        type="string"
+        default="com.op.core.app"
+        help="app package name" />   
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>  
